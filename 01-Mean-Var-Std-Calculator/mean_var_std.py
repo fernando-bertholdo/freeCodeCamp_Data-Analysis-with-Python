@@ -4,7 +4,7 @@ def calculate(lista):
     
     # Verificar se a lista tem exatamente 9 elementos
     if len(lista) != 9:
-        raise ValueError("A lista deve conter 9 números.")
+        raise ValueError("A lista deve conter 9 numeros.")
 
     # Converte a lista em um array NumPy 3x3
     array = np.array(lista).reshape(3,3)
@@ -27,7 +27,7 @@ def calculate(lista):
     # Calcula a soma
     sum_value = [list(np.sum(array, axis=0)), list(np.sum(array, axis=1)), np.sum(array).tolist()]
 
-    # Retorna os resultados dos cálculos
+    # exibe uma string com os resultados dos cálculos 
     calculations = {
         'média': média,
         'variance': variância,

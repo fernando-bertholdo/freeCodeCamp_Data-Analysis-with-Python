@@ -1,6 +1,6 @@
 import pandas as pd
 
-def calculate_demographic_data(print_data=True):
+def calculate_demographic_data(print_resultados=True):
     
     df = pd.read_csv('02-Demographic-Data-Analyzer/adult.data.csv')
 
@@ -38,7 +38,7 @@ def calculate_demographic_data(print_data=True):
     top_IN_occupation = df[(df['native-country'] == 'India') & (df['salary'] == '>50K')]['occupation'].value_counts().idxmax()
 
     # Mostrar resultados se print_data for True
-    if print_data:
+    if print_resultados:
         print(f"Contagem por raça: \n{race_count}")
         print(f"Idade média dos homens: {average_age_men}")
         print(f"Porcentagem com diploma de Bacharelado: {percentage_bachelors}%")
